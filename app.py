@@ -7,7 +7,7 @@ mongodb_uri = "mongodb+srv://tothienbao6a0:tintom@bulletinchallenge.5ltdrpd.mong
 client = pymongo.MongoClient(mongodb_uri)
 
 
-db = client.get_database("bulletinchallenge.5ltdrpd.mongodb.net/?retryWrites=true&w=majority")
+db = client.get_database("bulletinchallenge")
 
 
 app = Flask(__name__)
