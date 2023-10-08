@@ -31,99 +31,99 @@
         {% for document in data %}
         <tr>
             <td>Track Name</td>
-            <td>{{ data.track_name }}</td>
+            <td>{{ document['track_name'] }}</td>
         </tr>
         <tr>
             <td>Artist(s) Name</td>
-            <td>{{ data.artist(s)_name }}</td>
+            <td>{{ document['artist(s)_name'] }}</td>
         </tr>
         <tr>
             <td>Artist Count</td>
-            <td>{{ data.artist_count }}</td>
+            <td>{{ document['artist_count'] }}</td>
         </tr>
         <tr>
             <td>Released Year</td>
-            <td>{{ data.released_year }}</td>
+            <td>{{ document['released_year'] }}</td>
         </tr>
         <tr>
             <td>Released Month</td>
-            <td>{{ data.released_month }}</td>
+            <td>{{ document['released_month'] }}</td>
         </tr>
         <tr>
             <td>Released Day</td>
-            <td>{{ data.released_day }}</td>
+            <td>{{ document['released_day'] }}</td>
         </tr>
         <tr>
             <td>In Spotify Playlists</td>
-            <td>{{ data.in_spotify_playlists }}</td>
+            <td>{{ document['in_spotify_playlists'] }}</td>
         </tr>
         <tr>
             <td>In Spotify Charts</td>
-            <td>{{ data.in_spotify_charts }}</td>
+            <td>{{ document['in_spotify_charts'] }}</td>
         </tr>
         <tr>
             <td>Streams</td>
-            <td>{{ data.streams }}</td>
+            <td>{{ document['streams'] }}</td>
         </tr>
         <tr>
             <td>In Apple Playlists</td>
-            <td>{{ data.in_apple_playlists }}</td>
+            <td>{{ document['in_apple_playlists'] }}</td>
         </tr>
         <tr>
             <td>In Apple Charts</td>
-            <td>{{ data.in_apple_charts }}</td>
+            <td>{{ document['in_apple_charts'] }}</td>
         </tr>
         <tr>
             <td>In Deezer Playlists</td>
-            <td>{{ data.in_deezer_playlists }}</td>
+            <td>{{ document['in_deezer_playlists'] }}</td>
         </tr>
         <tr>
             <td>In Deezer Charts</td>
-            <td>{{ data.in_deezer_charts }}</td>
+            <td>{{ document['in_deezer_charts'] }}</td>
         </tr>
         <tr>
             <td>In Shazam Charts</td>
-            <td>{{ data.in_shazam_charts }}</td>
+            <td>{{ document['in_shazam_charts'] }}</td>
         </tr>
         <tr>
             <td>BPM</td>
-            <td>{{ data.bpm }}</td>
+            <td>{{ document['bpm'] }}</td>
         </tr>
         <tr>
             <td>Key</td>
-            <td>{{ data.key }}</td>
+            <td>{{ document['key'] }}</td>
         </tr>
         <tr>
             <td>Mode</td>
-            <td>{{ data.mode }}</td>
+            <td>{{ document['mode'] }}</td>
         </tr>
         <tr>
             <td>Danceability (%)</td>
-            <td>{{ data.danceability_% }}</td>
+            <td>{{ document['danceability_%'] }}</td>
         </tr>
         <tr>
             <td>Valence (%)</td>
-            <td>{{ data.valence_% }}</td>
+            <td>{{ document['valence_%'] }}</td>
         </tr>
         <tr>
             <td>Energy (%)</td>
-            <td>{{ data.energy_% }}</td>
+            <td>{{ document['energy_%'] }}</td>
         </tr>
         <tr>
             <td>Acousticness (%)</td>
-            <td>{{ data.acousticness_% }}</td>
+            <td>{{ document['acousticness_%'] }}</td>
         </tr>
         <tr>
             <td>Instrumentalness (%)</td>
-            <td>{{ data.instrumentalness_% }}</td>
+            <td>{{ document['instrumentalness_%'] }}</td>
         </tr>
         <tr>
             <td>Liveness (%)</td>
-            <td>{{ data.liveness_% }}</td>
+            <td>{{ document['liveness_%'] }}</td>
         </tr>
         <tr>
             <td>Speechiness (%)</td>
-            <td>{{ data.speechiness_% }}</td>
+            <td>{{ document['speechiness_%'] }}</td>
         </tr>
         {% endfor %}
     </table>
