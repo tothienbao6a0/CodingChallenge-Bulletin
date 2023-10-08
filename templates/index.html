@@ -3,14 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MongoDB Data</title>
+    <title>SpotifyCharts</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <h1>Data from MongoDB</h1>
-    <ul>
+    <h1>Spotify Charts</h1>
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
         {% for document in data %}
-            <li>{{ document }}</li>
+        <tr>
+            <td>Track Name</td>
+            <td>{{ data.track_name }}</td>
+        </tr>
+        <tr>
+            <td>Artist(s) Name</td>
+            <td>{{ data.artist(s)_name }}</td>
+        </tr>
+        <tr>
+            <td>Artist Count</td>
+            <td>{{ data.artist_count }}</td>
+        </tr>
+        <tr>
+            <td>Released Year</td>
+            <td>{{ data.released_year }}</td>
+        </tr>
+        <tr>
+            <td>Released Month</td>
+            <td>{{ data.released_month }}</td>
+        </tr>
+        <tr>
+            <td>Released Day</td>
+            <td>{{ data.released_day }}</td>
+        </tr>
+        <tr>
+            <td>In Spotify Playlists</td>
+            <td>{{ data.in_spotify_playlists }}</td>
+        </tr>
+        <tr>
+            <td>In Spotify Charts</td>
+            <td>{{ data.in_spotify_charts }}</td>
+        </tr>
+        <tr>
+            <td>Streams</td>
+            <td>{{ data.streams }}</td>
+        </tr>
+        <tr>
+            <td>In Apple Playlists</td>
+            <td>{{ data.in_apple_playlists }}</td>
+        </tr>
+        <tr>
+            <td>In Apple Charts</td>
+            <td>{{ data.in_apple_charts }}</td>
+        </tr>
+        <tr>
+            <td>In Deezer Playlists</td>
+            <td>{{ data.in_deezer_playlists }}</td>
+        </tr>
+        <tr>
+            <td>In Deezer Charts</td>
+            <td>{{ data.in_deezer_charts }}</td>
+        </tr>
+        <tr>
+            <td>In Shazam Charts</td>
+            <td>{{ data.in_shazam_charts }}</td>
+        </tr>
+        <tr>
+            <td>BPM</td>
+            <td>{{ data.bpm }}</td>
+        </tr>
+        <tr>
+            <td>Key</td>
+            <td>{{ data.key }}</td>
+        </tr>
+        <tr>
+            <td>Mode</td>
+            <td>{{ data.mode }}</td>
+        </tr>
+        <tr>
+            <td>Danceability (%)</td>
+            <td>{{ data.danceability_% }}</td>
+        </tr>
+        <tr>
+            <td>Valence (%)</td>
+            <td>{{ data.valence_% }}</td>
+        </tr>
+        <tr>
+            <td>Energy (%)</td>
+            <td>{{ data.energy_% }}</td>
+        </tr>
+        <tr>
+            <td>Acousticness (%)</td>
+            <td>{{ data.acousticness_% }}</td>
+        </tr>
+        <tr>
+            <td>Instrumentalness (%)</td>
+            <td>{{ data.instrumentalness_% }}</td>
+        </tr>
+        <tr>
+            <td>Liveness (%)</td>
+            <td>{{ data.liveness_% }}</td>
+        </tr>
+        <tr>
+            <td>Speechiness (%)</td>
+            <td>{{ data.speechiness_% }}</td>
+        </tr>
         {% endfor %}
-    </ul>
+    </table>
 </body>
 </html>
