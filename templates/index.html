@@ -14,9 +14,9 @@
 </head>
 <body>
     <h1>Spotify Charts</h1>
-    {% for index, document in enumerate(data, start=1) %}
+    {% for document in data %}
     <div class="song-block">
-        <h2>Song Details (Rank: {{ index }})</h2>
+        <h2>Song Details</h2>
         <table>
             <tr>
                 <th>Field</th>
