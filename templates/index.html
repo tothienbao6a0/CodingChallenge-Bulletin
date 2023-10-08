@@ -5,127 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpotifyCharts</title>
     <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th, td {
+        .song-block {
             border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+            margin-bottom: 20px;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
     <h1>Spotify Charts</h1>
-    <table>
-        <tr>
-            <th>Field</th>
-            <th>Value</th>
-        </tr>
-        {% for document in data %}
-        <tr>
-            <td>Track Name</td>
-            <td>{{ document['track_name'] }}</td>
-        </tr>
-        <tr>
-            <td>Artist(s) Name</td>
-            <td>{{ document['artist(s)_name'] }}</td>
-        </tr>
-        <tr>
-            <td>Artist Count</td>
-            <td>{{ document['artist_count'] }}</td>
-        </tr>
-        <tr>
-            <td>Released Year</td>
-            <td>{{ document['released_year'] }}</td>
-        </tr>
-        <tr>
-            <td>Released Month</td>
-            <td>{{ document['released_month'] }}</td>
-        </tr>
-        <tr>
-            <td>Released Day</td>
-            <td>{{ document['released_day'] }}</td>
-        </tr>
-        <tr>
-            <td>In Spotify Playlists</td>
-            <td>{{ document['in_spotify_playlists'] }}</td>
-        </tr>
-        <tr>
-            <td>In Spotify Charts</td>
-            <td>{{ document['in_spotify_charts'] }}</td>
-        </tr>
-        <tr>
-            <td>Streams</td>
-            <td>{{ document['streams'] }}</td>
-        </tr>
-        <tr>
-            <td>In Apple Playlists</td>
-            <td>{{ document['in_apple_playlists'] }}</td>
-        </tr>
-        <tr>
-            <td>In Apple Charts</td>
-            <td>{{ document['in_apple_charts'] }}</td>
-        </tr>
-        <tr>
-            <td>In Deezer Playlists</td>
-            <td>{{ document['in_deezer_playlists'] }}</td>
-        </tr>
-        <tr>
-            <td>In Deezer Charts</td>
-            <td>{{ document['in_deezer_charts'] }}</td>
-        </tr>
-        <tr>
-            <td>In Shazam Charts</td>
-            <td>{{ document['in_shazam_charts'] }}</td>
-        </tr>
-        <tr>
-            <td>BPM</td>
-            <td>{{ document['bpm'] }}</td>
-        </tr>
-        <tr>
-            <td>Key</td>
-            <td>{{ document['key'] }}</td>
-        </tr>
-        <tr>
-            <td>Mode</td>
-            <td>{{ document['mode'] }}</td>
-        </tr>
-        <tr>
-            <td>Danceability (%)</td>
-            <td>{{ document['danceability_%'] }}</td>
-        </tr>
-        <tr>
-            <td>Valence (%)</td>
-            <td>{{ document['valence_%'] }}</td>
-        </tr>
-        <tr>
-            <td>Energy (%)</td>
-            <td>{{ document['energy_%'] }}</td>
-        </tr>
-        <tr>
-            <td>Acousticness (%)</td>
-            <td>{{ document['acousticness_%'] }}</td>
-        </tr>
-        <tr>
-            <td>Instrumentalness (%)</td>
-            <td>{{ document['instrumentalness_%'] }}</td>
-        </tr>
-        <tr>
-            <td>Liveness (%)</td>
-            <td>{{ document['liveness_%'] }}</td>
-        </tr>
-        <tr>
-            <td>Speechiness (%)</td>
-            <td>{{ document['speechiness_%'] }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+    {% for document in data %}
+    <div class="song-block">
+        <h2>Song Details</h2>
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Track Name</td>
+                <td>{{ document['track_name'] }}</td>
+            </tr>
+            <tr>
+                <td>Artist(s) Name</td>
+                <td>{{ document['artist(s)_name'] }}</td>
+            </tr>
+            <tr>
+                <td>Artist Count</td>
+                <td>{{ document['artist_count'] }}</td>
+            </tr>
+            <tr>
+                <td>Released Year</td>
+                <td>{{ document['released_year'] }}</td>
+            </tr>
+            <tr>
+                <td>Released Month</td>
+                <td>{{ document['released_month'] }}</td>
+            </tr>
+            <tr>
+                <td>Released Day</td>
+                <td>{{ document['released_day'] }}</td>
+            </tr>
+            <tr>
+                <td>In Spotify Playlists</td>
+                <td>{{ document['in_spotify_playlists'] }}</td>
+            </tr>
+            <tr>
+                <td>In Spotify Charts</td>
+                <td>{{ document['in_spotify_charts'] }}</td>
+            </tr>
+            <tr>
+                <td>Streams</td>
+                <td>{{ document['streams'] }}</td>
+            </tr>
+            <tr>
+                <td>In Apple Playlists</td>
+                <td>{{ document['in_apple_playlists'] }}</td>
+            </tr>
+            <tr>
+                <td>In Apple Charts</td>
+                <td>{{ document['in_apple_charts'] }}</td>
+            </tr>
+            <tr>
+                <td>In Deezer Playlists</td>
+                <td>{{ document['in_deezer_playlists'] }}</td>
+            </tr>
+            <tr>
+                <td>In Deezer Charts</td>
+                <td>{{ document['in_deezer_charts'] }}</td>
+            </tr>
+            <tr>
+                <td>In Shazam Charts</td>
+                <td>{{ document['in_shazam_charts'] }}</td>
+            </tr>
+            <tr>
+                <td>BPM</td>
+                <td>{{ document['bpm'] }}</td>
+            </tr>
+            <tr>
+                <td>Key</td>
+                <td>{{ document['key'] }}</td>
+            </tr>
+            <tr>
+                <td>Mode</td>
+                <td>{{ document['mode'] }}</td>
+            </tr>
+            <tr>
+                <td>Danceability (%)</td>
+                <td>{{ document['danceability_%'] }}</td>
+            </tr>
+            <tr>
+                <td>Valence (%)</td>
+                <td>{{ document['valence_%'] }}</td>
+            </tr>
+            <tr>
+                <td>Energy (%)</td>
+                <td>{{ document['energy_%'] }}</td>
+            </tr>
+            <tr>
+                <td>Acousticness (%)</td>
+                <td>{{ document['acousticness_%'] }}</td>
+            </tr>
+            <tr>
+                <td>Instrumentalness (%)</td>
+                <td>{{ document['instrumentalness_%'] }}</td>
+            </tr>
+            <tr>
+                <td>Liveness (%)</td>
+                <td>{{ document['liveness_%'] }}</td>
+            </tr>
+            <tr>
+                <td>Speechiness (%)</td>
+                <td>{{ document['speechiness_%'] }}</td>
+            </tr>
+        </table>
+    </div>
+    {% endfor %}
 </body>
 </html>
