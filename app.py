@@ -13,29 +13,27 @@ db = client.get_database("bulletinchallenge")
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    return 'Hello, World!'
 
 def index():
     try:
-        # Connect to MongoDB
+      
         client = MongoClient(mongodb_uri)
 
-        # Access your database and collection
-        db = client['your-database-name']
-        collection = db['your-collection-name']
+      
+        db = client['spotifyUsers']
+        collection = db['spotifyData']
 
-        # Query the collection and retrieve data
+      
         data = collection.find()
 
-        # Render an HTML template with the data
+
         return render_template('index.html', data=data)
 
     except Exception as e:
         return f"An error occurred: {str(e)}"
 
     finally:
-        # Close the MongoDB connection
+        
         client.close()
 
 if __name__ == '__main__':
