@@ -1,2 +1,3 @@
 command to run: 
 sudo ~/my-web-app/venv/bin/python app.py
+git remote set-url origin https://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@github.com/tothienbao6a0/CodingChallenge-Bulletin.git
